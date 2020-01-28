@@ -33,15 +33,16 @@ public class UserController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public void signUp(@RequestParam String userId, String userPw, String userName, Integer number, String email) {
+    public void signUp(@RequestParam String userId, String userPw, String userName, Integer userNumber, String email, String authCode) {
 
         userService.signUp(
                 UserSignUp.builder()
                 .userId(userId)
                 .userPw(userPw)
                 .userName(userName)
-                .number(number)
+                .userNumber(userNumber)
                 .email(email)
+                .authCode(authCode)
                 .build()
         );
     }
