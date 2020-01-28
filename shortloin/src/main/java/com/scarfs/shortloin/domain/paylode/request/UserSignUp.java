@@ -10,15 +10,17 @@ public class UserSignUp {
     private String userId;
     private String userPw;
     private String userName;
-    private Integer number;
+    private Integer userNumber;
     private String email;
+    private String authCode;
 
     @Builder
-    public UserSignUp(String userId, String userPw, String userName, Integer number, String email) {
+    public UserSignUp(String userId, String userPw, String userName, Integer userNumber, String email, String authCode) {
         this.userId = userId;
         this.userPw = userPw;
         this.userName = userName;
-        this.number = number;
+        this.userNumber = userNumber;
         this.email = email;
+        this.authCode = authCode;
     }
 }
